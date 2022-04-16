@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include("./partials/header.ejs")-%>
+
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Admin Wrap</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <%-include("./partials/top-bar.ejs")-%>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <%-include("./partials/side-navbar.ejs")-%>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h3 class="text-themecolor">Welcome Enes 😇</h3>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Overview -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <center class="mt-4"> <img src="../assets/images/users/5.jpg" class="img-circle"
+                                        width="150" />
+                                    <h4 class="card-title mt-2"><%=user.name%> <%=user.surName%></h4>
+                                    <h6 class="card-subtitle" style="width: 30%;">
+                                        <%=user.description%>
+                                        <%if(user.altDescription){%>
+                                            <%=user.altDescription%>
+                                        <%}%>
+                                    </h6>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Overview -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Education -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-9 d-flex align-items-stretch">
+                        <div class="card w-100">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div>
+                                        <h5 class="card-title">Education</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <%if(user.education.highschool){%>
+                                        <div class="col-lg-6 d-flex align-items-stretch">
+                                            <div class="card w-100">
+                                                <div class="card-body">
+                                                    <h5 class=" card-title"><%=user.education.highschool.name%></h5>
+                                                    <span class="label label-info label-rounded">High School</span>
+                                                    <span class="label label-warning label-rounded"><%=user.education.highschool.graduation%></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <%}%>
+                                    <%if(user.education.university){%>
+                                        <div class="col-lg-6 d-flex align-items-stretch">
+                                            <div class="card w-100">
+                                                <div class="card-body">
+                                                    <h5 class=" card-title"><%=user.education.university.name%></h5>
+                                                    <span class="label label-info label-rounded">University</span>
+                                                    <span class="label label-warning label-rounded"><%=user.education.university.graduation%></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <%}%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-lg-3 d-flex align-items-stretch">
+                        <div class="card w-100">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div>
+                                        <h5 class="card-title">Skills</h5>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <%for(let i=0;i<user.skills.length;i++){%>
+                                                <tr>
+                                                    <td><%=user.skills[i]%></td>
+                                                    <td><i class="fa fa-check-circle" style="color: lightskyblue;"></i></td>
+                                                </tr>    
+                                            <%}%>
+                                            <%for(let i=0;i<user.skillsLearning.length;i++){%>
+                                                <tr>
+                                                    <td><%=user.skillsLearning[i]%></td>
+                                                    <td><i class="fa fa-refresh" style="color: lightslategray;"></i></td>
+                                                </tr> 
+                                            <%}%>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Education -->
+                <!-- ============================================================== -->
+                <!-- Contact -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card w-100">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div>
+                                        <h5 class="card-title">Contact</h5>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Platform</th>
+                                                <th>Link</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Linkedin</td>
+                                                <%if(user.social.linkedin){%>
+                                                    <td><%=user.social.linkedin%></td>
+                                                <%}else{%>
+                                                    <td>Not defined</td>
+                                                <%}%>
+                                            </tr>
+                                            <tr>
+                                                <td>Instagram</td>
+                                                <%if(user.social.instagram){%>
+                                                    <td><%=user.social.instagram%></td>
+                                                <%}else{%>
+                                                    <td>Not defined</td>
+                                                <%}%>
+                                            </tr>
+                                            <tr>
+                                                <td>Github</td>
+                                                <%if(user.social.github){%>
+                                                    <td><%=user.social.github%></td>
+                                                <%}else{%>
+                                                    <td>Not defined</td>
+                                                <%}%>
+                                            </tr>
+                                            <tr>
+                                                <td>Facebook</td>
+                                                <%if(user.social.facebook){%>
+                                                    <td><%=user.social.facebook%></td>
+                                                <%}else{%>
+                                                    <td>Not defined</td>
+                                                <%}%>
+                                            </tr>
+                                            <tr>
+                                                <td>Youtube</td>
+                                                <%if(user.social.Youtube){%>
+                                                    <td><%=user.social.Youtube%></td>
+                                                <%}else{%>
+                                                    <td>Not defined</td>
+                                                <%}%>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Page Content -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <%-include("./partials/footer.ejs")-%>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="/assets/node_modules/jquery/jquery.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="/assets/node_modules/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="/assets/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="/assets/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="/assets/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="/assets/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="/assets/node_modules/raphael/raphael-min.js"></script>
+    <script src="/assets/node_modules/morrisjs/morris.min.js"></script>
+    <!--c3 JavaScript -->
+    <script src="/assets/node_modules/d3/d3.min.js"></script>
+    <script src="/assets/node_modules/c3-master/c3.min.js"></script>
+    <!-- Chart JS -->
+    <script src="/assets/js/dashboard1.js"></script>
+</body>
+
+</html>

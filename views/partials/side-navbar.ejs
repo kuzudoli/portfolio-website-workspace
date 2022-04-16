@@ -1,0 +1,34 @@
+<aside class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <li>
+                   
+                        <a class="waves-effect waves-dark <%if(page == 'Home'){%>active<%}%>" href="/admin" aria-expanded="false">
+                            <i class="fa fa-user"></i><span class="hide-menu">Home</span>
+                        </a>
+                    
+                </li>
+                <li>
+                    <a class="waves-effect waves-dark <%if(page == 'Education'){%>active<%}%>" href="/admin/educations" aria-expanded="false">
+                        <i class="fa fa-graduation-cap"></i><span class="hide-menu">Educations</span>
+                    </a>
+                </li>
+                <li> 
+                    <a class="waves-effect waves-dark <%if(page == 'Skills'){%>active<%}%>" href="/admin/skills" aria-expanded="false">
+                        <i class="fa fa-bolt"></i><span class="hide-menu">Skills</span>
+                    </a>
+                </li>
+                <li> 
+                    <a class="waves-effect waves-dark <%if(page == 'Contact'){%>active<%}%>" href="/admin/contacts" aria-expanded="false">
+                        <i class="fa fa-envelope"></i><span class="hide-menu">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+</aside>

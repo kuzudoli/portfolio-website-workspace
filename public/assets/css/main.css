@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto', sans-serif;
+}
+*::selection{
+    color: #ffffff;
+    background-color: #292929;
+}
+body{
+    background-color: #f8f8f8;
+    padding: 150px 50px 50px 100px;
+}
+section{
+    height: 100vh;
+    margin-bottom: 50px;
+}
+/*FIRST PAGE*/
+#firstPage{
+    height: 80vh;
+}
+#col-left,#col-right{
+    width: 50%;
+}
+#col-left{
+    float: left;
+    /* background-color: gray; */
+}
+#col-right{
+    float: right;
+    /* background-color: darkgrey; */
+    padding: 0 !important;
+}
+#col-right a{
+    user-select: none;
+    cursor: default;
+}
+#col-left h1{
+    font-size: 80px;
+    font-family:'Roboto', sans-serif;
+    font-weight: 300;
+}
+#col-left p{
+    width: 500px;
+    text-align: justify;
+    text-justify:inter-word;
+    margin-top: 25px;
+    font-size: 25px;
+}
+.social-media{
+    margin-top: 30px;
+    font-size: 25px;
+}
+.social-media a{
+    color: #292929;
+    display: inline-block;
+    transition: all .5s;
+}
+.social-media a:hover{
+    transform:translateY(-10px);
+}
+.social-media a + a{
+    margin-left: 10px;
+}
+#scroll{
+    color: #292929;
+    background-color: #292929;
+    position: absolute;
+    bottom: 2px;
+    width: 2px;
+    height: 51px;
+    transition: 1s all;
+}
+#scroll p{
+    font-size: large;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#personImage{
+    width: 95%;
+    padding: 0px !important;
+}
+/*FIRST PAGE END*/
+
+/*SECOND PAGE*/
+#secondPage{
+    padding-right:30px;
+}
+#secondPage .title{
+    text-align:right;
+    margin-bottom: 50px;
+}
+.title-left{
+    text-align: left;
+}
+.title h1{
+    font-weight: 400;
+    font-size: 80px;
+}
+.content-left,.content-right{
+    font-size: 30px;
+    position: absolute;
+}
+.content-left{
+    left: 95px;
+}
+.content-right{
+    right: 85px;
+    margin-top: 200px;
+}
+.school-title{
+    font-weight: 400;
+}
+.school-title-right{
+    font-weight: 400;
+    text-align: end;
+}
+.timeline{
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+}
+.timeline-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -5px;
+}
+.line{
+    width: 200px;
+    margin-right: 10px;
+    height: 3px;
+    background-color: #292929;
+}
+.line-right{
+    width: 200px;
+    margin-left: 10px;
+    height: 3px;
+    background-color: #292929;
+}
+.year{
+    font-size: 25px;
+    font-weight: bold;
+}
+.school-name{
+    font-weight: 300;
+    margin-top: 5px;
+}
+.school-name-right{
+    font-weight: 300;
+    margin-top: 5px;
+    display: block;
+    float: right;
+}
+/*SECOND SECTION END*/
+/*THIRD SECTION*/
+#thirdPage .title{
+    text-align:left;
+    margin-bottom: 50px;
+}
+.skillBox{
+    width: 230px;
+    height: 140px;
+    background-color: #f8f8f8;
+    border-radius: 10px;;
+    box-shadow: -15px -15px 20px -5px rgba(255,255,255,0.8), 15px 15px 20px -10px #d6d6d6;
+    display: inline-block;
+    margin: 25px 40px 0 0;
+}
+.checked{
+    box-shadow: inset -15px -15px 20px -5px rgba(255,255,255,0.8), inset 15px 15px 20px -10px #d6d6d6;
+}
+.skillBox h2{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 140px;
+    font-size: 37px;
+    color: #292929;
+}
+.checked h2{
+    color: #292929b9;
+}
+/*THIRD SECTION END*/

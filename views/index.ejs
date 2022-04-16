@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <section id="firstPage">
+        <div id="col-left">
+            <h1>Hi, my<br/>name is <span style="font-weight: bold;"><%=user.name%>.</span></h1>
+
+            <p>
+                <%=user.description%>
+                <%if(user.altDescription){%>
+                    <span style="opacity: 0.2;"><%=user.altDescription%></span>
+                <%}%>
+            </p>
+
+            <%if(user.social){%>
+                <div class="social-media">
+                    <%if(user.social.linkedin){%>
+                        <a href="<%=user.social.linkedin%>" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <%}%>
+
+                    <%if(user.social.github){%>
+                        <a href="<%=user.social.github%>" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <%}%>
+
+                    <%if(user.social.instagram){%>
+                        <a href="<%=user.social.instagram%>" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <%}%>
+
+                    <%if(user.social.youtube){%>
+                        <a href="<%=user.social.youtube%>" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <%}%>
+
+                    <%if(user.social.facebook){%>
+                        <a href="<%=user.social.facebook%>" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <%}%>
+                </div>
+            <%}%>
+            <div id="scroll">
+                <p>Scroll Down</p>
+            </div>
+         </div>
+         
+         <div id="col-right">
+            <a href='https://www.freepik.com/vectors/career-opportunities' target="_blank">
+                <img id="personImage" src="/assets/img/person.png" alt="Career opportunities vector created by upklyak - www.freepik.com">
+            </a>
+         </div>
+    </section>
+    <section id="secondPage">
+        <div class="title">
+            <h1>Education</h1>
+        </div>
+        <div class="educationContent">
+            <div class="content-left">
+                <h3 class="school-title">High School</h3>
+                <div class="timeline">
+                    <div class="line"></div>
+                    <div class="year"><%=user.education.highschool.graduation%></div>
+                </div>
+                <p class="school-name"><%=user.education.highschool.name%></p>
+            </div>
+            
+            <div class="content-right">
+                <h3 class="school-title-right">University</h3>
+                <div class="timeline-right">
+                    <div class="year"><%=user.education.university.graduation%></div>
+                    <div class="line-right"></div>
+                </div>
+                <p class="school-name-right"><%=user.education.university.name%></p>
+            </div>
+        </div>
+    </section>
+    <section id="thirdPage">
+        <div class="title">
+            <h1>Skills</h1>
+        </div>
+        <div class="skillContent">
+            <div class="content-center">
+                <%for(let i=0;i<user.skills.length;i++){%>
+                    <div class="skillBox">
+                        <h2><%=user.skills[i]%></h2>
+                    </div>
+                <%}%>
+
+                <%for(let i=0;i<user.skillsLearning.length;i++){%>
+                    <div class="skillBox checked">
+                        <h2><%=user.skillsLearning[i]%></h2>
+                    </div>
+                <%}%>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="https://kit.fontawesome.com/a1845262ff.js" crossorigin="anonymous"></script>
+<script src="/assets/js/main.js"></script>
+</html>
